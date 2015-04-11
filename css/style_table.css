@@ -1,0 +1,158 @@
+/* CSS Document */
+
+.building_fixed{
+	width:200px;
+	bottom:10px;
+	left:10px;
+	margin-left:10px;
+	padding-top:650px;
+	font-size:30px;
+	color:#333;
+	position:relative;
+}
+
+.button_building{
+	background: none repeat scroll 0 0 #2ECC71;
+    border: medium none;
+    color: #f9f6e5;
+    display: block;
+    font-size: 1.25em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-top: 2.5em;
+    padding: 1.5em;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.border_meja_edit{
+	
+	width:1200px;
+	position:absolute;
+	margin-left:80px;
+	margin-top:150px;
+	border:4px #27AE60 dashed;
+	margin-bottom:150px;
+}
+
+.border_meja{
+	width:1200px;
+	position:absolute;
+	margin-left:80px;
+	margin-top:150px;
+	border:4px #ecf0f5 dashed;
+	margin-bottom:120px;
+}
+
+.meja1{
+		/*background:url(../../img/house1.png) no-repeat !important;*/
+		background-color:#fff;
+		border-radius:2px;
+		
+    display: table;
+    width: 100%;
+	}
+	
+.meja2{
+		background-color:#81CFE0;
+		border-radius:2px;
+		
+    display: table;
+    width: 100%;
+	}
+.meja3{
+		background-color:#F5AB35;
+		border-radius:2px;
+		
+    display: table;
+    width: 100%;
+	}
+	
+.meja_title{
+	text-align:center;
+	padding-top:10px;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px #fff;
+	color:#222;
+}
+
+.home_title{
+	color:#ccc;
+	height:28px;
+	line-height:20px;
+	position:absolute;
+	width:100%;
+	margin-top:-28px;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.home_title_background{
+	background:#000;
+	height:28px;
+	line-height:20px;
+	position:absolute;
+	width:100%;
+	margin-top:-28px;
+	opacity:0.5;
+}
+
+.tooltip_left{
+	background:	#2A3035;
+	width:100%;
+}
+
+.tooltip_right{
+	color:#222;
+	width:100%;
+	padding:10px;
+}
+.footer_button{
+	background:#f6f7f8;
+	padding:10px;
+	border-top:1px solid #eee;
+}
+
+.tooltip_item_name{
+	font-size:10px;
+	font-weight:bold;
+	color:#999;
+}
+
+.tooltip_item_name2{
+	font-size:14px;
+	font-weight:bold;
+	color:#666;
+	text-transform:uppercase;
+}
+
+.color_item{
+	height:80px;
+	margin-right:0px;
+	float:right;
+	width:300px;
+	text-transform:uppercase;
+	color:#666;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.color_item_kosong{
+	height:40px;
+	width:40px;
+	background:#81cfe0;
+	border-radius:2px;
+	line-height:40px;
+	color:#fff;
+	font-size:16px;
+}
+
+.color_item_terjual{
+	height:40px;
+	width:40px;
+	background:#f5ab35;
+	border-radius:2px;
+		line-height:40px;
+	color:#fff;
+	font-size:16px;
+}
