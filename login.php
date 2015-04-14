@@ -35,7 +35,7 @@
     <body >
 
         <div class="form-box" id="login-box">
-            <div class="header"><div class="bg-logo"><span style="font-size: 1.3em !important;"><strong>House Plan</strong></span><br>System</div></div>
+            <div class="header"><div class="bg-logo"><span style="font-size: 1.3em !important;"><strong>Siteplan</strong></span><br>System</div></div>
             <form action="controllers/login.php?page=login" method="post">
                 <div class="body bg-white">
 

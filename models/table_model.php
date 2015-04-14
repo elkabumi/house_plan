@@ -6,7 +6,7 @@ function select(){
 }
 
 function select_table($building_id){
-	$q3 = mysql_query("select a.* 
+	$q3 = mysql_query("select a.* , c.tb_name
 						from tables a
 						join table_types b on b.tt_id = a.tt_id
 						join table_blocks c on c.tb_id = b.tb_id

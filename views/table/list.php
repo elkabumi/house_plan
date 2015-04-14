@@ -228,14 +228,14 @@ function handleDragStop_<?= $r4['table_id']?>( event, ui) {
 
 
 					<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
-						<button class="blue_color_button" type="button"  onClick="save_all_position(); ">SAVE</button>
+						<button class="red_color_button" type="button"  onClick="save_all_position(); ">SAVE</button>
 						
 					</div><!-- morph-button -->
 
  </div>
  
  <div class="border_meja_edit">
-  <img src="../img/maps/maps2.png" style="visibility:hidden;" />
+  <img src="../img/building/<?= $building_img ?>" style="visibility:hidden;" />
  </div>
  
  
@@ -257,7 +257,7 @@ function handleDragStop_<?= $r4['table_id']?>( event, ui) {
 	<div id="makeMeDraggable_<?= $row['table_id']?>" <?php echo $class_meja ?>>
 	 
 				
-			<div class="meja_title"><?= $row['table_name']?></div>
+			<div class="meja_title"><?= $row['tb_name'].$row['table_name']?></div>
 				<span class="tooltip-content clearfix">
 					
 						<?php 

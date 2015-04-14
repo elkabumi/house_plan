@@ -127,7 +127,7 @@ body{
  </div>
  
   <div class="border_meja">
-  <img src="../img/maps/maps2.png" style="visibility:hidden;" />
+  <img src="../img/building/<?= $building_img ?>" style="visibility:hidden;" />
   </div>
  
  <?php
@@ -138,7 +138,7 @@ body{
 	
 	<?php
 	$no = 1;
-	$query =  mysql_query("select a.* 
+	$query =  mysql_query("select a.*, c.tb_name
 					from tables a
 					join table_types b on b.tt_id = a.tt_id
 					join table_blocks c on c.tb_id = b.tb_id
@@ -158,7 +158,7 @@ body{
 	<div id="makeMeDraggable_<?= $row['table_id']?>" <?php echo $class_meja ?>>
 	
 				
-				<div class="meja_title"><?= $row['table_name']?></div>
+				<div class="meja_title"><?= $row['tb_name'].$row['table_name']?></div>
 				<span class="tooltip-content clearfix">
 					
 						<?php 

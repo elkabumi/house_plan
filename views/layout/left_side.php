@@ -60,14 +60,7 @@
                             </a>
                             
                   </li>
-                  
-                   <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 5){ echo "class='active'"; } ?>>
-                            <a href="report_detail.php">
-                                 <i class="fa fa-list-alt"></i>
-                                <span>laporan</span>
-                            </a>
-                            
-                  </li>
+                
                              
                         
                     <?php
