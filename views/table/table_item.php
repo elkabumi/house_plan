@@ -41,8 +41,19 @@
 
     </div>
     
-    <div class="footer_button">
-    	<div class="btn_edit_item">Rp 200 JT</div>
+   <div class="footer_button">
+    	<?php
+        if($row['table_status'] == 1){
+			
+		?>
+        <div class="btn_sold">SOLD !</div>
+        <?php
+		}else{
+		?>
+    	<div class="btn_edit_item">Rp <?php echo get_rupiah($row['table_price'])?></div>
+        <?php
+		}
+		?>
     </div>
     
   

@@ -2988,3 +2988,9 @@ Component: timeline
 	color:#fff;
 	padding:5px;
 }
+.block_color{
+	width:40px;
+	height:40px;
+	background-color:#000;
+	border-radius:3px;
+}

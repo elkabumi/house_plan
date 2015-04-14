@@ -40,6 +40,7 @@ switch ($page) {
 			$row->tt_name = false;
 			$row->tb_id = false;
 			$row->tt_img = false;
+			$row->tt_color = "#81cfe0";
 			
 			$action = "table_type.php?page=save";
 		}
@@ -54,7 +55,7 @@ switch ($page) {
 
 		$i_name = get_isset($i_name);
 		$i_tb_id = get_isset($i_tb_id);
-		
+		$i_color = get_isset($i_color);
 		
 		$path = "../img/table_type/";
 		$i_img_tmp = $_FILES['i_img']['tmp_name'];
@@ -65,7 +66,8 @@ switch ($page) {
 		$data = "'',
 					'$i_name',
 					'$i_tb_id',
-					'".$date.$i_img."'
+					'".$date.$i_img."',
+					'$i_color'
 					
 			";
 			
@@ -88,7 +90,7 @@ switch ($page) {
 		$id = get_isset($_GET['id']);
 		$i_name = get_isset($i_name);
 		$i_tb_id = get_isset($i_tb_id);
-		
+		$i_color = get_isset($i_color);
 		
 		$path = "../img/table_type/";
 		$i_img_tmp = $_FILES['i_img']['tmp_name'];
@@ -107,7 +109,8 @@ switch ($page) {
 					
 					$data = "tt_name = '$i_name',
 							tb_id = '$i_tb_id',
-							tt_img = '$date$i_img'
+							tt_img = '$date$i_img',
+							tt_color = '$i_color'
 
 					";
 				}
@@ -115,7 +118,8 @@ switch ($page) {
 			
 			}else{
 				$data = "tt_name = '$i_name',
-							tb_id = '$i_tb_id'
+							tb_id = '$i_tb_id',
+							tt_color = '$i_color'
 					";
 			}
 			

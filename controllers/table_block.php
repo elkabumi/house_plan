@@ -38,6 +38,7 @@ switch ($page) {
 			$row = new stdClass();
 	
 			$row->tb_name = false;
+			
 			$row->building_id = false;
 			
 			$action = "table_block.php?page=save";

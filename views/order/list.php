@@ -6,7 +6,7 @@ if(!$_SESSION['login']){
 <!doctype html>
 <html lang="en">
 <head>
-<title>House Plan System</title>
+<title>Siteplan System</title>
 <link rel="stylesheet" type="text/css" href="../css/style_table.css" />
 <!-- tooltip -->
  <link rel="stylesheet" type="text/css" href="../css/tooltip/tooltip-classic.css" />
@@ -24,14 +24,7 @@ if(!$_SESSION['login']){
          <link rel="stylesheet" href="../css/vertical_scroll_new/style.css">
 		<link rel="stylesheet" href="../css/vertical_scroll_new/jquery.mCustomScrollbar.css">
        
-       <script type="text/javascript">
-       function cancel_order(id){
-		 	var question = confirm("Anda yakin ingin cancel order ?");
-			if(question==true){
-				window.location.href = 'order.php?page=cancel_order&table_id='+id+'&building_id='+<?= $building_id ?>;
-			}
-	   }
-       </script>
+     
     
 		<script src="../js/button_component/modernizr.custom.js"></script>
 <style>
@@ -63,7 +56,7 @@ body{
 	
 	#makeMeDraggable_<?= $r3['table_id']?> { 
 	position: absolute;
-	width: 40px; height: 40px; 
+	
 	margin-left:
 	<?php
 	$data_x = ($r3['data_x']) ? $r3['data_x'] : 0;
@@ -138,7 +131,7 @@ body{
 	
 	<?php
 	$no = 1;
-	$query =  mysql_query("select a.*, c.tb_name
+	$query =  mysql_query("select a.*, c.tb_name, b.tt_color
 					from tables a
 					join table_types b on b.tt_id = a.tt_id
 					join table_blocks c on c.tb_id = b.tb_id
@@ -148,17 +141,26 @@ body{
 		
 		
 		switch($row['table_status']){
-			case 0: $class_meja = "class='meja2'"; break;
-			case 1: $class_meja = "class='meja3'"; break;
+			case 0: $class_meja = "class='meja1'"; break;
+			case 1: $class_meja = "class='meja2'"; break;
 			
 		}
 		
 		
 	?><span class="tooltip tooltip-effect-1">
-	<div id="makeMeDraggable_<?= $row['table_id']?>" <?php echo $class_meja ?>>
+	<div id="makeMeDraggable_<?= $row['table_id']?>"  class="meja1" style="background-color:<?= $row['tt_color']?>">
 	
 				
-				<div class="meja_title"><?= $row['tb_name'].$row['table_name']?></div>
+				<div class="meja_title">
+                <?php
+                if($row['table_status'] == 1){
+				?>
+				<div class="meja_status"></div>
+                <?php
+				}
+				?>
+				<?= $row['tb_name'].$row['table_name']?>
+              </div>
 				<span class="tooltip-content clearfix">
 					
 						<?php 

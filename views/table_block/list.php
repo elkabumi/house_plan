@@ -58,7 +58,8 @@
                                             <th width="5%">No</th>
                                                 <th>Blok Rumah</th>
                                                 <th>Wilayah</th>
-                                                   <th>Config</th> 
+                                               
+                                                <th>Config</th> 
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -70,6 +71,7 @@
                                             <td><?= $no?></td>
                                                <td><?= $row['tb_name']?></td>
                                                <td><?= $row['building_name']?></td>
+                                              
                                                <td style="text-align:center;">
 
                                                     <a href="table_block.php?page=form&id=<?= $row['tb_id']?>" class="btn btn-default" ><i class="fa fa-pencil"></i></a>

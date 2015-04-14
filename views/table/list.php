@@ -6,7 +6,7 @@ if(!$_SESSION['login']){
 <!doctype html>
 <html lang="en">
 <head>
-<title>House Plan System</title>
+<title>Siteplan System</title>
 <link rel="stylesheet" type="text/css" href="../css/style_table.css" />
 <!-- tooltip -->
  <link rel="stylesheet" type="text/css" href="../css/tooltip/tooltip-classic.css" />
@@ -254,10 +254,18 @@ function handleDragStop_<?= $r4['table_id']?>( event, ui) {
 		
 	?>
   <span class="tooltip tooltip-effect-1">
-	<div id="makeMeDraggable_<?= $row['table_id']?>" <?php echo $class_meja ?>>
+	<div id="makeMeDraggable_<?= $row['table_id']?>" class="meja1" style="background-color:<?= $row['tt_color']?>">
 	 
 				
-			<div class="meja_title"><?= $row['tb_name'].$row['table_name']?></div>
+			<div class="meja_title">
+			  <?php
+                if($row['table_status'] == 1){
+				?>
+				<div class="meja_status"></div>
+                <?php
+				}
+				?>
+			<?= $row['tb_name'].$row['table_name']?></div>
 				<span class="tooltip-content clearfix">
 					
 						<?php 

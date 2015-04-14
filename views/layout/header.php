@@ -32,6 +32,8 @@ if(!$_SESSION['login']){
         <link href="../css/timepicker/bootstrap-timepicker.min.css" rel="stylesheet"/>
         <!-- datepicker -->
        <link href="../css/datepicker/datepicker.css" rel="stylesheet">
+       <!-- Bootstrap Color Picker -->
+        <link href="../css/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet"/>
        
        <!-- lookup -->
        <link rel="stylesheet" type="text/css" href="../css/lookup/bootstrap-select.css">
@@ -83,6 +85,8 @@ if(!$_SESSION['login']){
 		<script type="text/javascript" src="../js/lookup/bootstrap-select.js"></script>
         <!-- AdminLTE App -->
         <script src="../js/AdminLTE/app.js" type="text/javascript"></script>
+          <!-- bootstrap color picker -->
+        <script src="../js/plugins/colorpicker/bootstrap-colorpicker.min.js" type="text/javascript"></script>
         <!-- validasi -->
         <script src="../js/plugins/validate/jquery.validate.js" type="text/javascript"></script>
         <!-- button -->

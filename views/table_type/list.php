@@ -59,6 +59,7 @@
                                                 <th>Tipe Rumah</th>
                                                 <th>Blok - Wilayah</th>
                                                 <th>Image</th>
+                                                 <th>Warna</th>
                                                    <th>Config</th> 
                                             </tr>
                                         </thead>
@@ -78,6 +79,7 @@
 												   $image = "../img/table_type/img_not_found.png";
 											    }
 											    echo $image ?>" height="80" /></td>
+                                                 <th><div class="block_color" style="background:<?= $row['tt_color'] ?>" ></div></th>
                                                <td style="text-align:center;">
 
                                                     <a href="table_type.php?page=form&id=<?= $row['tt_id']?>" class="btn btn-default" ><i class="fa fa-pencil"></i></a>
@@ -95,7 +97,7 @@
                                         </tbody>
                                           <tfoot>
                                             <tr>
-                                                <td colspan="5"><a href="<?= $add_button ?>" class="btn btn-info " >Add</a></td>
+                                                <td colspan="6"><a href="<?= $add_button ?>" class="btn btn-info " >Add</a></td>
                                                
                                             </tr>
                                         </tfoot>

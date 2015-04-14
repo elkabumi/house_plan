@@ -54,6 +54,16 @@
                                            <input type="file" name="i_img" id="i_img" />
                                         </div>
                                         
+                                        
+                                    	    <!-- Color Picker -->
+                                    <div class="form-group">
+                                        <label>Warna</label>                                         
+                                        <input required name="i_color" type="text" class="form-control my-colorpicker1" value="<?= $row->tt_color ?>"/>
+                                    </div><!-- /.form group -->
+
+                                   
+
+                                        
                                         </div>
                                        
                                         <div style="clear:both;"></div>
