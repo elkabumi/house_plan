@@ -18,7 +18,9 @@ if(!$_SESSION['login']){
       <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
        <!-- lookup -->
        <link rel="stylesheet" type="text/css" href="../css/lookup/bootstrap-select.css">
-     
+     	<!-- progress button -->
+        <link rel="stylesheet" type="text/css" href="../css/progress_button/component.css" />
+        
         <!-- jQuery 2.0.2 -->
        <script src="../js/jquery.js"></script>
      
@@ -31,6 +33,10 @@ if(!$_SESSION['login']){
         
        <script type="text/javascript">
        		function save_all_position(){
+				
+				var scrollLeft = (window.pageXOffset !== undefined) ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
+				var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+				
 				<?php
 				$q_save = select_table($building_id);
 				while($r_save = mysql_fetch_array($q_save)){
@@ -44,7 +50,7 @@ if(!$_SESSION['login']){
 				 $.ajax({
 					type: "GET",
 					url: "table.php?page=save_table_location",
-					data:{id:<?= $r_save['table_id']?>, data_x:x, data_y:y}
+					data:{id:<?= $r_save['table_id']?>, data_x:x, data_y:y, data_top:scrollTop}
 				}).done(function( result ) {
 				   //alert("Simpan berhasil");
 				});
@@ -52,11 +58,11 @@ if(!$_SESSION['login']){
 				<?php
 				}
 				?>
-				alert("Simpan berhasil");
+				//window.location.href = 'table.php?building_id=<?= $building_id?>';
 			}
        </script>
     
-		<script src="../js/button_component/modernizr.custom.js"></script>
+		<script src="../js/progress_button/modernizr.custom.js"></script>
 <style>
 body{
 	background-color:#ecf0f5;
@@ -81,7 +87,8 @@ body{
 	<?php
 	$data_y = ($r3['data_y']) ? $r3['data_y'] : 0;
 	echo $data_y ?>px; 
-	cursor: pointer; 
+	cursor: pointer;
+	box-shadow:rgba(0, 0, 0, 0.0980392) 0 1px 3px;
 	
 	}
 	<?php
@@ -183,6 +190,7 @@ function handleDragStop_<?= $r4['table_id']?>( event, ui) {
 					</div>
                     
                -->     
+             
                     
                      <div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
 						<button class="blue_color_button" type="button">TAMBAH RUMAH</button>
@@ -228,8 +236,8 @@ function handleDragStop_<?= $r4['table_id']?>( event, ui) {
 
 
 					<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
-						<button class="red_color_button" type="button"  onClick="save_all_position(); ">SAVE</button>
 						
+						 <button class="progress-button red_color_button" data-style="shrink" data-horizontal onClick="save_all_position(); ">SAVE</button>
 					</div><!-- morph-button -->
 
  </div>
@@ -253,7 +261,7 @@ function handleDragStop_<?= $r4['table_id']?>( event, ui) {
 		}
 		
 	?>
-  <span class="tooltip tooltip-effect-1">
+ <!-- <span class="tooltip tooltip-effect-1">-->
 	<div id="makeMeDraggable_<?= $row['table_id']?>" class="meja1" style="background-color:<?= $row['tt_color']?>">
 	 
 				
@@ -277,7 +285,7 @@ function handleDragStop_<?= $r4['table_id']?>( event, ui) {
 				</span>
 			   
 	 </div>
-      </span>
+      <!--</span>-->
   
 	<?php
 	$no++;
@@ -294,7 +302,7 @@ function handleDragStop_<?= $r4['table_id']?>( event, ui) {
 				<div>
 					<div class="content-style-sidebar">
 						<span class="icon icon-close">Close the overlay</span>
-						<h2>Room</h2>
+						<h2>Wilayah</h2>
 						<ul>
                        <?php
 						$q_building5 = mysql_query("select * from buildings order by building_id");
@@ -320,7 +328,7 @@ function handleDragStop_<?= $r4['table_id']?>( event, ui) {
        
    
 
-	<script src="../js/button_component/classie.js"></script>
+	<script src="../js/progress_button/classie.js"></script>
 		<script src="../js/button_component/uiMorphingButton_fixed.js"></script>
 		<script>
 			(function() {
@@ -388,6 +396,27 @@ function handleDragStop_<?= $r4['table_id']?>( event, ui) {
 			})();
 		</script>
     
+    	<!-- progress button -->
+        <script src="../js/progress_button/progressButton.js"></script>
+		<script>
+			[].slice.call( document.querySelectorAll( 'button.progress-button' ) ).forEach( function( bttn ) {
+				new ProgressButton( bttn, {
+					callback : function( instance ) {
+						var progress = 0,
+							interval = setInterval( function() {
+								progress = Math.min( progress + Math.random() * 0.1, 1 );
+								instance._setProgress( progress );
+
+								if( progress === 1 ) {
+									instance._stop(1);
+									clearInterval( interval );
+								}
+							}, 200 );
+					}
+				} );
+				
+			} );
+		</script>
 		
 </body>
 </html>

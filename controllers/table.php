@@ -34,8 +34,9 @@ switch ($page) {
 		$id=$_GET['id'];
 		$data_x=$_GET['data_x'];
 		$data_y=$_GET['data_y'];
+		$data_top = $_GET['data_top'];
 		
-		save_table_location($id, $data_x, $data_y);
+		save_table_location($id, $data_x, $data_y, $data_top);
 		
 	
 	break;

@@ -66,7 +66,7 @@ body{
 	$data_y = ($r3['data_y']) ? $r3['data_y'] : 0;
 	echo $data_y ?>px; 
 	cursor: pointer; 
-	
+	box-shadow:rgba(0, 0, 0, 0.0980392) 0 1px 3px;
 	}
 	<?php
 	
@@ -190,7 +190,7 @@ body{
 				<div>
 					<div class="content-style-sidebar">
 						<span class="icon icon-close">Close the overlay</span>
-						<h2>Room</h2>
+						<h2>Wilayah</h2>
 						<ul>
                        <?php
 						$q_building5 = mysql_query("select * from buildings order by building_id");
