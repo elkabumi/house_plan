@@ -46,7 +46,9 @@
         if($row['table_status'] == 1){
 			
 		?>
+        <a href="master_table.php?page=form_payment&id=<?php echo $row_item['table_id'] ?>"><div class="btn_view">VIEW</div></a>
         <div class="btn_sold">SOLD !</div>
+        
         <?php
 		}else{
 		?>

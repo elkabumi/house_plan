@@ -106,8 +106,12 @@
 											  ?>
 												 <a href="master_table.php?page=form_payment&id=<?= $row['table_id']?>" class="btn btn-default" >JUAL</a>
                                                  <?php
-											  }
+											  }else{
 												 ?>
+                                                <a href="master_table.php?page=form_payment&id=<?= $row['table_id']?>" class="btn btn-default" ><i class="fa fa-search"></i></a>
+                                                 <?php
+                                                }
+                                                 ?>
                                                     <a href="master_table.php?page=form&id=<?= $row['table_id']?>" class="btn btn-default" ><i class="fa fa-pencil"></i></a>
                                                     <a href="javascript:void(0)" onclick="confirm_delete(<?= $row['table_id']; ?>,'master_table.php?page=delete&id=')" class="btn btn-default" ><i class="fa fa-trash-o"></i></a>
 

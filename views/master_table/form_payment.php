@@ -58,17 +58,22 @@
                                             <label>Metode Pembayaran</label><br />
                                             <table width="100%" border="0" cellspacing="0" cellpadding="4">
   <tr>
-    <td><input type="radio" name="i_payment_method" class="minimal" value="1" required  /> Cash</td>
+    <td><input type="radio" name="i_payment_method" class="minimal" value="1" required  <?php if($row_buyer->payment_method == 1){ echo "checked='checked'"; } ?> /> Cash</td>
   </tr>
   <tr>
-    <td><input type="radio" name="i_payment_method" class="minimal" value="2" required /> Kredit</td>
+    <td><input type="radio" name="i_payment_method" class="minimal" value="2" required   <?php if($row_buyer->payment_method == 2){ echo "checked='checked'"; } ?> /> Kredit</td>
   </tr>
   <tr>
-    <td> <input type="radio" name="i_payment_method" class="minimal" value="3"  required/> Kredit Bank</td>
+    <td> <input type="radio" name="i_payment_method" class="minimal" value="3"  required   <?php if($row_buyer->payment_method == 3){ echo "checked='checked'"; } ?> /> Kredit Bank</td>
   </tr>
 </table>
 
                                            
+                                        </div>
+                                       
+                                        <div class="form-group">
+                                            <label>DP</label>
+                                            <input required type="text" name="i_payment_dp" class="form-control" placeholder="Masukkan dp..." value="<?= $row_buyer->payment_dp ?>"/>
                                         </div>
                                         
                                         <div class="form-group">
@@ -87,6 +92,12 @@
                                            
                                         </div>
                                         
+                                        
+                                           <div class="form-group">
+                                            <label>Tanggal</label>
+                                            <input required type="text" name="i_payment_date" class="form-control" placeholder="Masukkan nama pembeli..." value="<?= $row_buyer->payment_date ?>"/>
+                                        </div>
+                                        
                                         </div>
                                        
                                         <div style="clear:both;"></div>
@@ -94,7 +105,9 @@
                                 </div><!-- /.box-body -->
                                 
                                   <div class="box-footer">
+                                 
                                 <input class="btn btn-success" type="submit" value="Save"/>
+                                
                                 <a href="<?= $close_button?>" class="btn btn-success" >Close</a>
                              
                              </div>

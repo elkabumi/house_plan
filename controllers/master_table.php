@@ -67,6 +67,8 @@ switch ($page) {
 			
 			if($get_payment){
 				$row_buyer = read_payment_id($id);
+				$row_buyer->payment_date = format_date($row_buyer->payment_date);
+				$action = "master_table.php?page=edit_payment&id=$id";
 			}else{
 				//inisialisasi
 				$row_buyer = new stdClass();
@@ -76,6 +78,8 @@ switch ($page) {
 				$row_buyer->buyer_name = false;
 				$row_buyer->buyer_phone = false;
 				$row_buyer->buyer_address = false;
+				$row_buyer->payment_dp = 0;
+				$row_buyer->payment_date = format_date(date("Y-m-d"));
 			
 				$action = "master_table.php?page=save_payment&id=$id";
 			}
@@ -121,7 +125,8 @@ switch ($page) {
 		$i_buyer_phone = get_isset($i_buyer_phone);
 		$i_buyer_address = get_isset($i_buyer_address);
 		$i_seller_id = get_isset($i_seller_id);
-		
+		$date = date("Y-m-d");
+		$i_payment_dp = get_isset($i_payment_dp);
 		
 		$data = "'',
 					'$id', 
@@ -129,7 +134,9 @@ switch ($page) {
 					'$i_payment_method',
 					'$i_buyer_name', 
 					'$i_buyer_phone',
-					'$i_buyer_address'
+					'$i_buyer_address',
+					'$date',
+					'$i_payment_dp'
 			";
 			
 		$data_table = "table_status = '1'";
@@ -142,6 +149,42 @@ switch ($page) {
 			header("Location: master_table.php?page=list&did=4");
 		
 		
+	break;
+
+	case 'edit_payment':
+
+		extract($_POST);
+
+		$id = (isset($_GET['id'])) ? $_GET['id'] : null;
+		$i_payment_method = get_isset($i_payment_method);
+		$i_buyer_name = get_isset($i_buyer_name);
+		$i_buyer_phone = get_isset($i_buyer_phone);
+		$i_buyer_address = get_isset($i_buyer_address);
+		$i_seller_id = get_isset($i_seller_id);
+		$date = date("Y-m-d");
+		$i_payment_dp = get_isset($i_payment_dp);
+		
+		$data = "
+					seller_id = '$i_seller_id',
+					payment_method = '$i_payment_method',
+					buyer_name = '$i_buyer_name', 
+					buyer_phone = '$i_buyer_phone',
+					buyer_address = '$i_buyer_address',
+					payment_date = '$date',
+					payment_dp = '$i_payment_dp'
+			";
+			
+		$data_table = "table_status = '1'";
+			
+			//echo $data;
+
+			update_payment($data, $id);
+			update($data_table, $id);
+		
+			header("Location: master_table.php?page=list&did=4");
+
+		
+
 	break;
 
 	case 'edit':

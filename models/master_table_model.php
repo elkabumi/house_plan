@@ -58,6 +58,10 @@ function update($data, $id){
 	mysql_query("update tables set ".$data." where table_id = '$id'");
 }
 
+function update_payment($data, $id){
+	mysql_query("update payments set ".$data." where table_id = '$id'");
+}
+
 function delete($id){
 	mysql_query("delete from tables where table_id = '$id'");
 }
