@@ -52,6 +52,38 @@ function create($data){
 
 function create_payment($data){
 	mysql_query("insert into payments values(".$data.")");
+	$payment_id = mysql_insert_id();
+	
+	return $payment_id;
+}
+
+function create_payment_detail($payment_id, $i_payment_tenor, $i_payment_angsuran){
+	
+	$lama_angsuran = $i_payment_tenor * 12;
+	
+	$pd_month = date("m");
+	$pd_year = date("Y");
+	for($i=1; $i<=$lama_angsuran; $i++){
+		
+		$data_detail = "'',
+						'$payment_id',
+						'$pd_month',
+						'$pd_year',
+						'$i',
+						'$i_payment_angsuran',
+						'0'
+						";
+		
+		mysql_query("insert into payment_details values(".$data_detail.")");
+		
+		if($pd_month < 12){
+			$pd_month++;
+		}else{
+			$pd_year++;
+			$pd_month = 1;
+		}
+	}
+	
 }
 
 function update($data, $id){

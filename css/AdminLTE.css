@@ -2535,12 +2535,13 @@ Component: timeline
 */
 /* skin-blue navbar */
 .skin-blue .navbar {
-  background-color: #00c0ef;
+  background-color: #fff;
+  box-shadow:rgba(0, 0, 0, 0.0980392) 0 1px 3px;
  
 }
 .skin-blue .navbar .nav a {
  
-  color: #fff ;
+  color: #999 ;
   
 }
 .skin-blue .navbar .nav > li > a:hover,

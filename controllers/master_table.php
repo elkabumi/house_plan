@@ -74,7 +74,7 @@ switch ($page) {
 				$row_buyer = new stdClass();
 				
 				$row_buyer->seller_id = false;
-				$row_buyer->payment_method = false;
+				$row_buyer->payment_method = 1;
 				$row_buyer->buyer_name = false;
 				$row_buyer->buyer_phone = false;
 				$row_buyer->buyer_address = false;
@@ -82,6 +82,8 @@ switch ($page) {
 				$row_buyer->buyer_office_address = false;
 				$row_buyer->payment_dp = 0;
 				$row_buyer->payment_date = format_date(date("Y-m-d"));
+				$row_buyer->payment_margin = 0;
+				$row_buyer->payment_angsuran = 0;
 			
 				$action = "master_table.php?page=save_payment&id=$id";
 			}
@@ -130,7 +132,19 @@ switch ($page) {
 		$i_buyer_office_address = get_isset($i_buyer_office_address);
 		$i_seller_id = get_isset($i_seller_id);
 		$date = date("Y-m-d");
-		$i_payment_dp = get_isset($i_payment_dp);
+		$i_price = get_isset($i_price);
+		
+		if($i_payment_method == 1){
+			$i_payment_dp = 0;
+			$i_payment_tenor = 0;
+			$i_payment_margin = 0;
+			$i_payment_angsuran = 0;
+		}else{
+			$i_payment_dp = get_isset($i_payment_dp);
+			$i_payment_tenor = get_isset($i_payment_tenor);
+			$i_payment_margin = get_isset($i_payment_margin);
+			$i_payment_angsuran = get_isset($i_payment_angsuran);
+		}
 		
 		$data = "'',
 					'$id', 
@@ -142,14 +156,21 @@ switch ($page) {
 					'$i_buyer_email',
 					'$i_buyer_office_address',
 					'$date',
-					'$i_payment_dp'
+					'$i_price',
+					'$i_payment_dp',
+					'$i_payment_tenor',
+					'$i_payment_margin',
+					'$i_payment_angsuran'
 			";
 			
 		$data_table = "table_status = '1'";
 			
 			//echo $data;
 
-			create_payment($data);
+			$create_payment = create_payment($data);
+			if($i_payment_method == 2){
+				create_payment_detail($create_payment, $i_payment_tenor, $i_payment_angsuran);
+			}
 			update($data_table, $id);
 		
 			header("Location: master_table.php?page=list&did=4");

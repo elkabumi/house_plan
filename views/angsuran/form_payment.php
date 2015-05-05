@@ -1,3 +1,19 @@
+     <?php
+                if(isset($_GET['did']) && $_GET['did'] == 1){
+                ?>
+                <section class="content_new">
+                   
+                <div class="alert alert-info alert-dismissable">
+                <i class="fa fa-check"></i>
+                <button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>
+                <b>Sukses !</b>
+              Angsuran tersimpan
+                </div>
+           
+                </section>
+                <?php
+                }
+				?>
 <script type="text/javascript">
        		function get_payment(id){
 				if(id==2){
@@ -52,28 +68,28 @@
 
                                            <div class="form-group">
                                             <label>Nama Pembeli</label>
-                                            <input required type="text" name="i_buyer_name" class="form-control" placeholder="Masukkan nama pembeli..." value="<?= $row_buyer->buyer_name ?>"/>
+                                            <input readonly="readonly" required type="text" name="i_buyer_name" class="form-control" placeholder="Masukkan nama pembeli..." value="<?= $row_buyer->buyer_name ?>"/>
                                         </div>
                                         
                                         <div class="form-group">
                                             <label>Telepon Pembeli</label>
-                                            <input required type="text" name="i_buyer_phone" class="form-control" placeholder="Masukkan telepon pembeli..." value="<?= $row_buyer->buyer_phone ?>"/>
+                                            <input readonly="readonly" required type="text" name="i_buyer_phone" class="form-control" placeholder="Masukkan telepon pembeli..." value="<?= $row_buyer->buyer_phone ?>"/>
                                         </div>
 
                                         <div class="form-group">
                                             <label>Email Pembeli</label>
-                                            <input required type="text" name="i_buyer_email" class="form-control" placeholder="Masukkan email pembeli..." value="<?= $row_buyer->buyer_email ?>"/>
+                                            <input readonly="readonly" required type="text" name="i_buyer_email" class="form-control" placeholder="Masukkan email pembeli..." value="<?= $row_buyer->buyer_email ?>"/>
                                         </div>
                                         
                                          <div class="form-group">
                                             <label>Alamat Pembeli</label>
-                                            <textarea name="i_buyer_address" cols="" rows="3" class="form-control"><?= $row_buyer->buyer_address ?></textarea>
+                                            <textarea readonly="readonly" name="i_buyer_address" cols="" rows="3" class="form-control"><?= $row_buyer->buyer_address ?></textarea>
                                            
                                         </div>
 
                                         <div class="form-group">
                                             <label>Alamat Kantor Pembeli</label>
-                                            <textarea name="i_buyer_office_address" cols="" rows="3" class="form-control"><?= $row_buyer->buyer_office_address ?></textarea>
+                                            <textarea readonly="readonly" name="i_buyer_office_address" cols="" rows="3" class="form-control"><?= $row_buyer->buyer_office_address ?></textarea>
                                            
                                         </div>
                                         
@@ -96,28 +112,17 @@
                                         </div>
                                         
                                           <div class="form-group">
-                                          <label>Nama Sales</label>
-                                           <select id="basic" name="i_seller_id" size="1" class="selectpicker show-tick form-control" data-live-search="true" />
-                                           <?php
-                                           while($r_seller = mysql_fetch_array($query_seller)){
-										   ?>
-                                             <option value="<?= $r_seller['user_id'] ?>" ><?= $r_seller['user_name']." / ".$r_seller['user_phone']; ?></option>
-                                             <?php
-										   }
-											 ?>
-                                           </select>                                    
+                                           <label>Nama Sales</label>
+                                            <input required type="text" name="i_sales" id="i_sales" class="form-control" placeholder="Masukkan harga rumah..." value="<?= $row->nama_sales." ( ".$row->telp_sales." )" ?>" readonly/>                              
                                   		</div>
                                         
                                         
                                           <div class="form-group">
                                             <label>Metode Pembayaran</label>
-   
-  <select name="i_payment_method" id="i_payment_method"  class="selectpicker show-tick form-control" data-live-search="true" onChange="get_payment(this.value)" >
-                                     
-                                        <option value="1" <?php if($row_buyer->payment_method == 1){ ?> selected="selected"<?php } ?>>Cash</option>
-                                        <option value="2" <?php if($row_buyer->payment_method == 2){ ?> selected="selected"<?php } ?>>Credit</option>
-                                       
-                                        </select>
+   										<?php
+                                        if($row->payment_method==1){ $metode_pembayaran = "Cash"; }else{ $metode_pembayaran = "Credit"; }
+										?>
+  <input required type="text" name="i_price" id="i_price" class="form-control" placeholder="Masukkan harga rumah..." value="<?= $metode_pembayaran?>" readonly/>
                                            
                                         </div>
                                        
@@ -125,25 +130,19 @@
                                        <div id="credit_form" <?php if($row_buyer->payment_method == 1){ ?>style="display:none"<?php }else{ ?>style="display:inline"<?php } ?>>
                                         <div class="form-group">
                                             <label>DP (Rp)</label>
-                                            <input required type="text" name="i_payment_dp" id="i_payment_dp" class="form-control" placeholder="Masukkan dp..." value="<?= $row_buyer->payment_dp ?>" onChange="get_angsuran()"/>
+                                            <input required type="text" name="i_payment_dp" id="i_payment_dp" class="form-control" placeholder="Masukkan dp..." value="<?= $row_buyer->payment_dp ?>" onChange="get_angsuran()" readonly="readonly" />
                                         </div>
                                        
                                        
                                          <div class="form-group">
                                             <label>Tenor (tahun)</label>
    
-  <select name="i_payment_tenor" id="i_payment_tenor"  class="selectpicker show-tick form-control" data-live-search="true" onChange="get_angsuran()" >
-                                     
-                                        <option value="10">10 tahun</option>
-                                        <option value="20">20 tahun</option>
-                                        <option value="30">30 tahun</option>
-                                       
-                                        </select>
+   <input required type="text" name="i_payment_dp" id="i_payment_dp" class="form-control" placeholder="Masukkan dp..." value="<?= $row_buyer->payment_tenor ?>" readonly="readonly" />
                                         </div>
                                         
                                          <div class="form-group">
                                             <label>Margin (%)</label>
-                                            <input required type="text" name="i_payment_margin"  id="i_payment_margin" class="form-control" placeholder="Masukkan margin..." value="<?= $row_buyer->payment_margin ?>" onChange="get_angsuran(this.value)"/>
+                                            <input required type="text" name="i_payment_margin"  id="i_payment_margin" class="form-control" placeholder="Masukkan margin..." value="<?= $row_buyer->payment_margin ?>" onChange="get_angsuran(this.value)" readonly="readonly" />
                                         </div>
                                         
                                            <div class="form-group">
@@ -157,7 +156,7 @@
                                         
                                            <div class="form-group">
                                             <label>Tanggal</label>
-                                            <input required type="text" name="i_payment_date" class="form-control" placeholder="Masukkan nama pembeli..." value="<?= $row_buyer->payment_date ?>"/>
+                                            <input required type="text" name="i_payment_date" class="form-control" placeholder="Masukkan nama pembeli..." value="<?= $row_buyer->payment_date ?>" readonly="readonly" />
                                         </div>
                                         
                                         </div>
@@ -182,4 +181,6 @@
                        </form>
                         </div><!--/.col (right) -->
                     </div>   <!-- /.row -->
-                </section><!-- /.content -->
+              
+                
+                

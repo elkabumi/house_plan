@@ -70,6 +70,14 @@
                             </a>
                             
                   </li>
+                  
+                  <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 4){ echo "class='active'"; } ?>>
+                            <a href="angsuran.php">
+                                 <i class="fa fa-dollar"></i>
+                                <span>Angsuran</span>
+                            </a>
+                            
+                  </li>
                 
                              
                 

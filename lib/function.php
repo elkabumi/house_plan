@@ -171,7 +171,7 @@ return $format;
 }
 
 function tool_format_number($data){
-	$data = number_format($data, 0);
+	$data = number_format($data, 0, ",", '.');
 	$data = "<div style='text-align:right'>".$data."</div>";
 	return $data;
 }
