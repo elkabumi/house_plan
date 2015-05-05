@@ -2,23 +2,23 @@
 
 function select(){
 	$query = mysql_query("select a.* 
-							from sellers a	
-							
-							order by seller_id");
+							from users a	
+							where user_type_id  = 2
+							order by user_id");
 	return $query;
 }
 
 function read_id($id){
 	$query = mysql_query("select *
-			from sellers
-			where seller_id = '$id'");
+			from users
+			where user_id = '$id'");
 	$result = mysql_fetch_object($query);
 	return $result;
 }
 
 
 function create($data){
-	mysql_query("insert into sellers values(".$data.")");
+	mysql_query("insert into users values(".$data.")");
 }
 
 function update($data, $id){

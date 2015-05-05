@@ -78,6 +78,8 @@ switch ($page) {
 				$row_buyer->buyer_name = false;
 				$row_buyer->buyer_phone = false;
 				$row_buyer->buyer_address = false;
+				$row_buyer->buyer_email = false;
+				$row_buyer->buyer_office_address = false;
 				$row_buyer->payment_dp = 0;
 				$row_buyer->payment_date = format_date(date("Y-m-d"));
 			
@@ -124,6 +126,8 @@ switch ($page) {
 		$i_buyer_name = get_isset($i_buyer_name);
 		$i_buyer_phone = get_isset($i_buyer_phone);
 		$i_buyer_address = get_isset($i_buyer_address);
+		$i_buyer_email = get_isset($i_buyer_email);
+		$i_buyer_office_address = get_isset($i_buyer_office_address);
 		$i_seller_id = get_isset($i_seller_id);
 		$date = date("Y-m-d");
 		$i_payment_dp = get_isset($i_payment_dp);
@@ -135,6 +139,8 @@ switch ($page) {
 					'$i_buyer_name', 
 					'$i_buyer_phone',
 					'$i_buyer_address',
+					'$i_buyer_email',
+					'$i_buyer_office_address',
 					'$date',
 					'$i_payment_dp'
 			";
@@ -160,6 +166,8 @@ switch ($page) {
 		$i_buyer_name = get_isset($i_buyer_name);
 		$i_buyer_phone = get_isset($i_buyer_phone);
 		$i_buyer_address = get_isset($i_buyer_address);
+		$i_buyer_email = get_isset($i_buyer_email);
+		$i_buyer_office_address = get_isset($i_buyer_office_address);
 		$i_seller_id = get_isset($i_seller_id);
 		$date = date("Y-m-d");
 		$i_payment_dp = get_isset($i_payment_dp);
@@ -170,6 +178,8 @@ switch ($page) {
 					buyer_name = '$i_buyer_name', 
 					buyer_phone = '$i_buyer_phone',
 					buyer_address = '$i_buyer_address',
+					buyer_email = '$i_buyer_email',
+					buyer_office_address = '$i_buyer_office_address',
 					payment_date = '$date',
 					payment_dp = '$i_payment_dp'
 			";
@@ -199,7 +209,6 @@ switch ($page) {
 					$data = " table_name = '$i_name', 
 							tt_id = '$i_tt_id',
 							table_price = '$i_price'
-
 					";
 			
 			update($data, $id);

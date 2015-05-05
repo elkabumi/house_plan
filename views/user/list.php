@@ -72,7 +72,7 @@
                                                <td><?= $row['user_login']?></td>
                                                 <td><?= $row['user_name']?></td>
                                                 <?php
-												$user_type = array('','Admin',"Non Admin");
+												$user_type = array('','Admin',"Sales");
 												
                                                 ?>
                                                 <td><?= $user_type[$row['user_type_id']]?></td>
@@ -95,7 +95,7 @@
                                         </tbody>
                                           <tfoot>
                                             <tr>
-                                                <td colspan="10"><a href="<?= $add_button ?>" class="btn btn-info " >Add</a></td>
+                                                <td colspan="5"><a href="<?= $add_button ?>" class="btn btn-info " >Add</a></td>
                                                
                                             </tr>
                                         </tfoot>

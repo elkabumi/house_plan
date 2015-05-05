@@ -20,7 +20,7 @@ function select_tt(){
 }
 
 function select_seller(){
-	$query = mysql_query("select * from sellers order by seller_id");
+	$query = mysql_query("select * from users where user_type_id = '2' order by user_id");
 	return $query;
 }
 

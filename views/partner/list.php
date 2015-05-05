@@ -58,8 +58,7 @@
                                             <th width="5%">No</th>
                                                 <th>Nama</th>
                                                 <th>Telepon</th>
-                                                <th>Alamat</th>
-                                                
+                                              
                                                    <th>Config</th> 
                                             </tr>
                                         </thead>
@@ -72,7 +71,6 @@
                                             <td><?= $no?></td>
                                                <td><?= $row['seller_name']?></td>
                                                 <td><?= $row['seller_phone']?></td>
-                                                 <td><?= $row['seller_address']?></td>
                                                <td style="text-align:center;">
 
                                                     <a href="partner.php?page=form&id=<?= $row['seller_id']?>" class="btn btn-default" ><i class="fa fa-pencil"></i></a>

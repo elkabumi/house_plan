@@ -61,7 +61,7 @@
                                           <label>Type</label>
                                            <select name="i_type" size="1" class="form-control"/>
                                              <option value="1">Admin</option>
-                                           <option value="2">Non Admin</option>       
+                                           <option value="2">Sales</option>       
                                            </select>                                    
                                   		</div>
 

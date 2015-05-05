@@ -21,6 +21,33 @@
                                     
                                     
                                         <div class="col-md-12">
+
+                                           <div class="form-group">
+                                            <label>Nama Pembeli</label>
+                                            <input required type="text" name="i_buyer_name" class="form-control" placeholder="Masukkan nama pembeli..." value="<?= $row_buyer->buyer_name ?>"/>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>Telepon Pembeli</label>
+                                            <input required type="text" name="i_buyer_phone" class="form-control" placeholder="Masukkan telepon pembeli..." value="<?= $row_buyer->buyer_phone ?>"/>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Email Pembeli</label>
+                                            <input required type="text" name="i_buyer_email" class="form-control" placeholder="Masukkan email pembeli..." value="<?= $row_buyer->buyer_email ?>"/>
+                                        </div>
+                                        
+                                         <div class="form-group">
+                                            <label>Alamat Pembeli</label>
+                                            <textarea name="i_buyer_address" cols="" rows="3" class="form-control"><?= $row_buyer->buyer_address ?></textarea>
+                                           
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Alamat Kantor Pembeli</label>
+                                            <textarea name="i_buyer_office_address" cols="" rows="3" class="form-control"><?= $row_buyer->buyer_office_address ?></textarea>
+                                           
+                                        </div>
                                         
                                         <div class="form-group">
                                             <label>Nomor Rumah</label>
@@ -46,7 +73,7 @@
                                            <?php
                                            while($r_seller = mysql_fetch_array($query_seller)){
 										   ?>
-                                             <option value="<?= $r_seller['seller_id'] ?>" ><?= $r_seller['seller_name']." / ".$r_seller['seller_address']; ?></option>
+                                             <option value="<?= $r_seller['user_id'] ?>" ><?= $r_seller['user_name']." / ".$r_seller['user_phone']; ?></option>
                                              <?php
 										   }
 											 ?>
@@ -76,21 +103,7 @@
                                             <input required type="text" name="i_payment_dp" class="form-control" placeholder="Masukkan dp..." value="<?= $row_buyer->payment_dp ?>"/>
                                         </div>
                                         
-                                        <div class="form-group">
-                                            <label>Nama Pembeli</label>
-                                            <input required type="text" name="i_buyer_name" class="form-control" placeholder="Masukkan nama pembeli..." value="<?= $row_buyer->buyer_name ?>"/>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label>Telepon Pembeli</label>
-                                            <input required type="text" name="i_buyer_phone" class="form-control" placeholder="Masukkan telepon pembeli..." value="<?= $row_buyer->buyer_phone ?>"/>
-                                        </div>
-                                        
-                                         <div class="form-group">
-                                            <label>Alamat Pembeli</label>
-                                            <textarea name="i_buyer_address" cols="" rows="3" class="form-control"><?= $row_buyer->buyer_address ?></textarea>
-                                           
-                                        </div>
+                                       
                                         
                                         
                                            <div class="form-group">

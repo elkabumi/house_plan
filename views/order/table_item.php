@@ -44,12 +44,19 @@
     <div class="footer_button">
     	<?php
         if($row['table_status'] == 1){
+			if($_SESSION['user_type_id']==1){
 			
 		?>
         <a href="master_table.php?page=form_payment&id=<?php echo $row_item['table_id'] ?>"><div class="btn_view">VIEW</div></a>
         <div class="btn_sold">SOLD !</div>
         
         <?php
+			}else{ ?>
+            
+            <div class="btn_sold_full">SOLD !</div>
+			
+			<?php
+				}
 		}else{
 		?>
     	<div class="btn_edit_item">Rp <?php echo get_rupiah($row['table_price'])?></div>

@@ -89,13 +89,14 @@ body{
 
  <div class="header_fixed"> 
  
-                    
-                    
-                    
-                   
-
+			<?php
+            if($_SESSION['user_type_id'] == 1){
+			?>
 					<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
 						<button class="blue_color_button" type="button"  onClick="javascript: window.location.href = 'home.php'; ">BACK TO MENU</button>
+                        <?php
+			}
+						?>
 						
 					</div><!-- morph-button -->
 

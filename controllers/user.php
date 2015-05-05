@@ -37,9 +37,9 @@ switch ($page) {
 			
 			//inisialisasi
 			$row = new stdClass();
-			$get_code = get_user_code();
+			//$get_code = get_user_code();
 
-			$row->user_code = $get_code;
+			$row->user_code = false;
 			$row->user_name = false;
 			$row->user_phone = false;
 			$row->user_password = false;

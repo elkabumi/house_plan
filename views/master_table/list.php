@@ -69,10 +69,8 @@
                                         <thead>
                                             <tr>
                                             <th width="5%">No</th>
-                                                <th>Nomor</th>
-                                                <th>Tipe</th>
-                                                <th>Blok</th>
-                                                <th>Wilayah</th>
+                                                <th>Blok - Nomor - Tipe - Wilayah</th>
+                                                
                                                 <th>Harga</th>
                                                 <th>Status</th>
                                                 <th>Config</th> 
@@ -85,10 +83,8 @@
                                             ?>
                                             <tr>
                                             <td><?= $no?></td>
-                                               <td><?= $row['table_name']?></td>
-                                                <td><?php echo $row['tt_name']?></td>
-                                                <td><?php echo $row['tb_name']?></td>
-                                                <td><?php echo $row['nama_gedung']?></td>
+                                               <td><?php echo $row['tb_name']?> - <?= $row['table_name']?> - <?php echo $row['tt_name']?> - <?php echo $row['nama_gedung']?></td>
+                                             
                                                 <td><?php echo tool_format_number($row['table_price']) ?></td>
                                                 <td>
                                                 <?php
@@ -127,7 +123,7 @@
                                         </tbody>
                                           <tfoot>
                                             <tr>
-                                                <td colspan="8"><a href="<?= $add_button ?>" class="btn btn-info " >Add</a></td>
+                                                <td colspan="5"><a href="<?= $add_button ?>" class="btn btn-info " >Add</a></td>
                                                
                                             </tr>
                                         </tfoot>

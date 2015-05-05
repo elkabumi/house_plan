@@ -600,8 +600,8 @@ body > .header .logo .icon {
   clear: both;
 }
 .user-panel > .image > img {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
 }
 .user-panel > .info {
   font-weight: 600;
@@ -2576,7 +2576,7 @@ Component: timeline
 }
 /* Skin-blue user panel */
 .skin-blue .user-panel > .image > img {
-  border: 1px solid #dfdfdf;
+  border: 5px solid #999;
 }
 .skin-blue .user-panel > .info,
 .skin-blue .user-panel > .info > a {

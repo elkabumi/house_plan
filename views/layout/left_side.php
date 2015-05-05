@@ -26,6 +26,10 @@
                         </div>
                     </div>
                     <!-- sidebar menu: : style can be found in sidebar.less -->
+                    
+                    <?php
+                    if($_SESSION['user_type_id'] == 1){
+					?>
                    
                  <ul class="sidebar-menu">  
                   <li class="treeview <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 1){ echo "active"; }?>">
@@ -39,12 +43,14 @@
                                 <li><a href="table_block.php?page=list"><i class="fa fa-home"></i>Blok Rumah</a></li>
                                 <li><a href="table_type.php?page=list"><i class="fa fa-home"></i>Tipe Rumah</a></li>
                                 <li><a href="master_table.php?page=list"><i class="fa fa-home"></i>Rumah</a></li>
-                               <li><a href="partner.php?page=list"><i class="fa fa-smile-o"></i>Sales</a></li>
-                             
+                              <!-- <li><a href="partner.php?page=list"><i class="fa fa-smile-o"></i>Sales</a></li>
+                             -->
                             </ul>
                   </li>
               
-                  
+                  <?php
+					}
+				  ?>
                    <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 3){ echo "class='active'"; } ?>>
                             <a href="order.php">
                                  <i class="fa fa-pencil-square-o"></i>
@@ -52,6 +58,10 @@
                             </a>
                             
                   </li>
+                  
+                   <?php
+                    if($_SESSION['user_type_id'] == 1){
+					?>
                   
                   <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 4){ echo "class='active'"; } ?>>
                             <a href="table.php">
@@ -62,10 +72,7 @@
                   </li>
                 
                              
-                        
-                    <?php
-                    if($_SESSION['user_type_id'] == 1){
-					?>
+                
                  
                   
                   <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 7){ echo "class='active'"; } ?>>

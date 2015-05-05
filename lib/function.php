@@ -148,10 +148,8 @@ function get_user_data(){
 
 	switch($row_user->user_type_id){
 		case 1: $type = "Admin"; break;
-		case 2: $type = "Owner "; break;
-		case 3: $type = "Checker"; break;
-		case 4: $type = "PBD"; break;
-		case 5: $type = "RDH"; break;
+		case 2: $type = "Sales "; break;
+		
 	}
 	
 	$user_img = $row_user->user_img;
