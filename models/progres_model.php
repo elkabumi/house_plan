@@ -1,7 +1,13 @@
 <?php
 
 function select(){
-	$query = mysql_query("select a.* , b.tt_name, c.tb_name, d.building_name as nama_gedung
+	$query = mysql_query("select a.* , b.tt_name, c.tb_name, d.building_name as nama_gedung,(SELECT progres_persen
+							FROM table_progres z
+							JOIN TABLES y ON y.table_id = z.table_id
+							JOIN progress x ON x.progres_id = z.progres_id
+							WHERE z.table_id = a.table_id
+							ORDER BY progres_persen DESC
+							LIMIT 1) as progres
 							from tables a
 							join table_types b on b.tt_id = a.tt_id
 							join table_blocks c on c.tb_id = b.tb_id

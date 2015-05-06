@@ -85,19 +85,13 @@
                                              
                                                 <td>
                                                 <?php
-                                                switch($row['table_status']){
-													case 0: $status = "<div class='list_status1'>Kosong</div>"; break;
-													case 1: $status = "<div class='list_status2'> Terjual</div>"; break;
-												}
-												
-												echo $status;
+                                                echo $row['progres'];
 												?>
                                                 </td>
                                               <td style="text-align:center;">
                                               <?php
                                               if($row['table_status']==0){
 											  ?>
-												 <a href="progres.php?page=form_payment&id=<?= $row['table_id']?>" class="btn btn-default" >JUAL</a>
                                                  <?php
 											  }else{
 												 ?>
@@ -105,7 +99,6 @@
                                                  <?php
                                                 }
                                                  ?>
-                                                    <a href="javascript:void(0)" onclick="confirm_delete(<?= $row['table_id']; ?>,'progres.php?page=delete&id=')" class="btn btn-default" ><i class="fa fa-trash-o"></i></a>
 
                                                 </td> 
                                             </tr>
