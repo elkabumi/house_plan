@@ -70,7 +70,11 @@
                                             <tr>
                                             <th width="5%">No</th>
                                                 <th>Blok - Nomor - Tipe - Wilayah</th>
+                                                 <th>Nama Pembeli</th>
+                                               <th>Telepon</th>
+                                               <th>Alamat</th>
                                                 <th>Progres Terakhir</th>
+                                                <th>Foto</th>
                                                 <th>Config</th> 
                                             </tr>
                                         </thead>
@@ -82,12 +86,25 @@
                                             <tr>
                                             <td><?= $no?></td>
                                                <td><?php echo $row['tb_name']?> - <?= $row['table_name']?> - <?php echo $row['tt_name']?> - <?php echo $row['nama_gedung']?></td>
-                                             
+                                               <td><?= $row['buyer_name'] ?></td>
+                                              <td><?= $row['buyer_phone']?></td>
+                                              <td><?= $row['buyer_address']?></td>
                                                 <td>
                                                 <?php
-                                                echo $row['progres'];
+												$get_last_progress = get_last_progress($row['table_id']);
+												$get_last_progress_img = get_last_progress_img($row['table_id']);
+												$get_last_progress = ($get_last_progress) ? $get_last_progress." %" : "-";
+												$get_last_progress_img = ($get_last_progress_img) ? $get_last_progress_img : "";
+                                                echo $get_last_progress;
 												?>
                                                 </td>
+                                                	<td><img src="<?php
+											   if($get_last_progress_img){
+											   		$image = "../img/progres/".$get_last_progress_img;
+											   }else{
+												   $image = "../img/img_not_found.png";
+											    }
+											    echo $image ?>" height="80" /></td>
                                               <td style="text-align:center;">
                                               <?php
                                               if($row['table_status']==0){

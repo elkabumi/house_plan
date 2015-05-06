@@ -89,6 +89,8 @@ switch ($page) {
 			}
 		}	
 		
+		$email_button = "master_table.php?page=send_email&id=$id";
+		
 		include '../views/master_table/form_payment.php';
 		get_footer();
 	break;
@@ -249,6 +251,45 @@ switch ($page) {
 		delete($id);
 
 		header('Location: master_table.php?page=list&did=3');
+
+	break;
+	
+	case 'send_email':
+
+		$id = get_isset($_GET['id']);	
+
+			
+			require_once "Mail.php";
+			$subject = "Test mail PHP";
+			  $body = "Test email dengan PHP dan GMAIL !!!";
+			  //mail($to, $subject, $body,$headers);
+			  //ganti baris ini dengan email yang dituju
+			  $to = "candra@elkabumi.com";
+			//ganti dengan emailmu /email resmi website
+			  $from = "candradwiprasetyo@gmail.com";
+			  $host = "ssl://smtp.gmail.com";
+			  $port = "465";
+			  //emailmu untuk login k gmail
+			  $username = "candradwiprasetyo@gmail.com";
+			   
+			  //passwordmu waktu login gmail
+			  $password = "cm3l0n pc";
+			 
+			$headers = array('From' => $from, 'To' => $to,
+			'Subject' => $subject);
+			$smtp = Mail::factory('smtp', array('host' => $host,
+			 'port' => $port, 'auth' => true,
+			 'username' => $username, 'password' => $password));
+			 
+			  $mail = $smtp -> send($to, $headers, $body);
+			 
+			if (PEAR::isError($mail)) {
+			echo("<p> Email Gagal dikirim" . $mail -> getMessage() . "</p>");
+			}else{
+			echo "Email berhasil di kirim ";
+			}
+
+		
 
 	break;
 }

@@ -174,6 +174,8 @@
                                 <?php
 								 }
 								?>
+                                 <a href="<?= $email_button?>" class="btn btn-success" >Send Email</a>
+                                
                                 <a href="<?= $close_button?>" class="btn btn-success" >Close</a>
                              
                              </div>

@@ -1,19 +1,16 @@
 <?php
 
 function select(){
-	$query = mysql_query("select a.* , b.tt_name, c.tb_name, d.building_name as nama_gedung,(SELECT progres_persen
-							FROM table_progres z
-							JOIN TABLES y ON y.table_id = z.table_id
-							JOIN progress x ON x.progres_id = z.progres_id
-							WHERE z.table_id = a.table_id
-							ORDER BY progres_persen DESC
-							LIMIT 1) as progres
+	$query = mysql_query("select a.* , b.tt_name, c.tb_name, d.building_name as nama_gedung, e.*, f.user_name as nama_sales
 							from tables a
 							join table_types b on b.tt_id = a.tt_id
 							join table_blocks c on c.tb_id = b.tb_id
 							join buildings d on d.building_id = c.building_id
-							where a.table_status = 1
-							order by table_id");
+							left join payments e on e.table_id = a.table_id
+							left join users f on f.user_id = e.seller_id
+							where table_status = 1
+							
+							order by a.table_id");
 	return $query;
 }
 
@@ -39,7 +36,9 @@ function read_progres(){
 function select_progres($id){
 	$query = mysql_query("select a.*,b.* from table_progres a
 						join progress b on b.progres_id = a.progres_id
-						where table_id = $id");
+						where table_id = $id
+						order by table_progres_id 
+						");
 	return $query;
 }
 
@@ -51,11 +50,13 @@ function select_progres_id($id){
 
 
 function read_id($id){
-	$query = mysql_query("select a.*, b.tt_name, c.tb_name, d.building_name
+	$query = mysql_query("select a.*, b.tt_name, c.tb_name, d.building_name, e.*, f.user_name as nama_sales, f.user_phone as telp_sales
 			from tables a
 			join table_types b on b.tt_id = a.tt_id
 							join table_blocks c on c.tb_id = b.tb_id
 							join buildings d on d.building_id = c.building_id
+							left join payments e on e.table_id = a.table_id
+							left join users f on f.user_id = e.seller_id
 			where a.table_id = '$id'");
 	$result = mysql_fetch_object($query);
 	return $result;
@@ -119,4 +120,27 @@ function get_img_old($id){
 	$result = mysql_fetch_array($query);
 	return $result['table_progres_img'];
 }
+
+function get_last_progress($table_id){
+	$query = mysql_query("SELECT progres_persen, table_progres_img
+								FROM table_progres z
+								JOIN progress x ON x.progres_id = z.progres_id
+								WHERE z.table_id = $table_id
+								ORDER BY table_progres_id DESC
+								LIMIT 1");
+	$result = mysql_fetch_array($query);
+	return $result['progres_persen'];
+}
+
+function get_last_progress_img($table_id){
+	$query = mysql_query("SELECT progres_persen, table_progres_img
+								FROM table_progres z
+								JOIN progress x ON x.progres_id = z.progres_id
+								WHERE z.table_id = $table_id
+								ORDER BY table_progres_id DESC
+								LIMIT 1");
+	$result = mysql_fetch_array($query);
+	return $result['table_progres_img'];
+}
+
 ?>
