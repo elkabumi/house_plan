@@ -71,6 +71,14 @@
                             
                   </li>
                   
+                    <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 4){ echo "class='active'"; } ?>>
+                            <a href="progres.php">
+                                 <i class="fa fa-dashboard"></i>
+                                <span>Progres</span>
+                            </a>
+                            
+                  </li>
+                  
                   <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 4){ echo "class='active'"; } ?>>
                             <a href="angsuran.php">
                                  <i class="fa fa-dollar"></i>
@@ -79,7 +87,21 @@
                             
                   </li>
                 
-                             
+                  <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 4){ echo "class='active'"; } ?>>
+                            <a href="rab.php">
+                                 <i class="fa fa-book"></i>
+                                <span>RAB</span>
+                            </a>
+                            
+                  </li> 
+                  
+                  <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 4){ echo "class='active'"; } ?>>
+                            <a href="time_schedule.php">
+                                 <i class="fa fa-calendar"></i>
+                                <span>Time Schedule</span>
+                            </a>
+                            
+                  </li>          
                 
                  
                   

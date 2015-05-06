@@ -160,7 +160,9 @@ switch ($page) {
 					'$i_payment_dp',
 					'$i_payment_tenor',
 					'$i_payment_margin',
-					'$i_payment_angsuran'
+					'$i_payment_angsuran',
+					'',
+					''
 			";
 			
 		$data_table = "table_status = '1'";

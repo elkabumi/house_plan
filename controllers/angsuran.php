@@ -4,7 +4,7 @@ include '../lib/function.php';
 include '../models/angsuran_model.php';
 $page = null;
 $page = (isset($_GET['page'])) ? $_GET['page'] : "list";
-$title = ucfirst("List Rumah");
+$title = ucfirst("Angsuran");
 
 $_SESSION['menu_active'] = 1;
 
@@ -25,7 +25,7 @@ switch ($page) {
 		
 		get_header();
 		
-		$title = ucfirst("Payment");
+		$title = ucfirst("Pembayaran Angsuran");
 
 		
 		$close_button = "angsuran.php?page=list";
@@ -80,7 +80,7 @@ switch ($page) {
 		
 		get_header();
 		
-		$title = ucfirst("Bayar Angsuran");
+		$title = ucfirst("Pembayaran Angsuran");
 
 		$id = (isset($_GET['id'])) ? $_GET['id'] : null;
 		

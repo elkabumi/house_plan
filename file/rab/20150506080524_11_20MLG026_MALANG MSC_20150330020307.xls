@@ -1,0 +1,290 @@
+<table width="100%" border="1" cellspacing="0" cellpadding="4">
+  <tr>
+    <td bgcolor="#FFFF00">Site Name</td>
+    <td bgcolor="#FFFF00">BSC/TCSM/RNC Name</td>
+    <td bgcolor="#FFFF00">Site ID</td>
+    <td bgcolor="#FFFF00">Project</td>
+    <td bgcolor="#FFFF00">Region</td>
+    <td bgcolor="#FFFF00">Branch</td>
+    <td bgcolor="#FFFF00">Page</td>
+    <td bgcolor="#FFFF00">Field Name</td>
+ 
+    <td bgcolor="#FFFF00">Data</td>
+  </tr>
+    <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Site ID</td>
+  
+    <td>20MLG026</td>
+  </tr>
+    <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>RNC Number/Name</td>
+  
+    <td>MCRNC_MALANG_03</td>
+  </tr>
+    <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Site Name</td>
+  
+    <td>MALANG</td>
+  </tr>
+    <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Address</td>
+  
+    <td>JL. JAKSA AGUNG SUPRAPTO NO.47 MALANG - JATIM</td>
+  </tr>
+    <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Coordinate	Latitude</td>
+  
+    <td>-7,9693894</td>
+  </tr>
+    <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Coordinate	Longitude</td>
+  
+    <td>112,6318548</td>
+  </tr>
+    <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Region</td>
+  
+    <td>EJBN</td>
+  </tr>
+    <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Zone</td>
+  
+    <td>MALANG</td>
+  </tr>
+    <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Province</td>
+  
+    <td>EAST JAVA</td>
+  </tr>
+    <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Site Model Type</td>
+  
+    <td>Co-locate (Specify) : ok</td>
+  </tr>
+    <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Site Type</td>
+  
+    <td>Co-locate (Specify) : </td>
+  </tr>
+    <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Site Access Protocol</td>
+  
+    <td>JL. A YANI-JL JAKSA AGUNG SUPRAPTO -SITE ADDRESS</td>
+  </tr>
+    <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Comment</td>
+  
+    <td>JL. A YANI-JL JAKSA AGUNG SUPRAPTO -SITE ADDRESS</td>
+  </tr>
+  		<tr>
+     <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Name</td>
+  
+    <td>Bpk. Diatma </td>
+    </tr>  
+				<tr>
+     <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Address</td>
+  
+    <td>JL. JAKSA AGUNG SUPRAPTO NO.47 MALANG</td>
+    </tr>  
+				<tr>
+     <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Phone</td>
+  
+    <td>0816298040</td>
+    </tr>  
+				<tr>
+     <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Fax</td>
+  
+    <td>0816298040</td>
+    </tr>  
+				<tr>
+     <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Name</td>
+  
+    <td>2</td>
+    </tr>  
+				<tr>
+     <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Address</td>
+  
+    <td></td>
+    </tr>  
+				<tr>
+     <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Phone</td>
+  
+    <td></td>
+    </tr>  
+				<tr>
+     <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 2</td>
+    <td>Fax</td>
+  
+    <td></td>
+    </tr>  
+		  <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 3</td>
+    <td>Gambar 1</td>
+  
+    <td>Buah Buahan</td>
+  </tr>
+    <tr>
+    <td>MALANG MSC</td>
+    <td>MCRNC_MALANG_03</td>
+    <td>20MLG026</td>
+    <td>AOP2014 Non Refarming East Java</td>
+    <td>EAST JAVA</td>
+    <td>MALANG</td>
+    <td>Page 3</td>
+    <td>Gambar 2</td>
+  
+    <td>Gunung Bromo</td>
+  </tr>
+  </table>

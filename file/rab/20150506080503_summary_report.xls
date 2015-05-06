@@ -1,0 +1,84 @@
+
+
+
+<body>
+<table>
+  <tr>
+  <th colspan="8">&nbsp;</th>
+  </tr>
+  </table>
+	 <table border="1" cellpadding="4" cellspacing="0" class="table table-bordered table-striped" id="example1">
+                                  
+                                            <tr bgcolor="#dddddd">
+                                             	<th>&nbsp;&nbsp;&nbsp; No &nbsp;&nbsp;&nbsp;</th>
+                                                                                       
+                                                    <th>Kode Transaksi</th>
+                                                    <th>Tanggal</th>
+                                                    <th>Nopol</th>
+                                                    <th>Nama Customer</th>
+                                                    <th>Asuransi</th>
+                                                    <th>No Klaim</th>
+                                                    
+                                                    <th>Status</th>
+           
+                                            </tr>
+                                        
+  
+		        								  <tr>
+          		
+                                               <th>1.</th>
+                                               <th align="center">R0000001</th>
+                                               <th>26/01/2015</th>
+                                               <th>W 6082 TZ</th>
+                                               <th>Candra Dwi Prasetyo</th>
+                                               <th>Autocillin</th>
+                                               <th>1111</th>
+                                           
+                          <th bgcolor="#27ae60">Proses Pengerjaan 0% </th>
+                
+                                                              
+                                             
+                                               
+                                            </tr>
+          
+          </tr>
+                    								  <tr>
+          		
+                                               <th>2.</th>
+                                               <th align="center">R0000054</th>
+                                               <th>29/01/2015</th>
+                                               <th>W 6082 TZ</th>
+                                               <th>Candra Dwi Prasetyo</th>
+                                               <th>Autocillin</th>
+                                               <th>128324</th>
+                                           
+                          <th bgcolor="#3498db">Pengerjaan Selesai</th>
+                                                              
+                                             
+                                               
+                                            </tr>
+          
+          </tr>
+                    								  <tr>
+          		
+                                               <th>3.</th>
+                                               <th align="center">R0000002</th>
+                                               <th>26/01/2015</th>
+                                               <th>L 6004 TY</th>
+                                               <th>Andri Febri</th>
+                                               <th>Autocillin</th>
+                                               <th>66667</th>
+                                           
+          
+             	 <th bgcolor="#f1c40f">Sudah disetujui</th>
+              
+				                                              
+                                             
+                                               
+                                            </tr>
+          
+          </tr>
+                         
+        </table>
+
+</body>
