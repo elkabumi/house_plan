@@ -87,6 +87,7 @@ switch ($page) {
 			
 			$row->table_progres_id = false;
 			$row->table_progres_date 	 = date("Y-m-d");
+			$row->table_progres_img = false;
 			
 			//echo $title;
 			$action = "progres.php?page=save_progres&id=$id";
